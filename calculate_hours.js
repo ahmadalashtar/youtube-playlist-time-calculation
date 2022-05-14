@@ -1,8 +1,8 @@
-const calculate_hours(){
+function calculate_hours(){
   let playlist = document.getElementsByClassName("playlist-items")
   let arr = new Array()
-  for (let i = 1 ; i < playlist[1].getElementsByClassName("style-scope ytd-thumbnail-overlay-time-status-renderer").length ; ){
-  i+=2
+  for (let i = 1 ; i < playlist[1].getElementsByClassName("style-scope ytd-thumbnail-overlay-time-status-renderer").length ;i+=2 ){
+    
     arr.push(playlist[1].getElementsByClassName("style-scope ytd-thumbnail-overlay-time-status-renderer")[i]);
   }
   let myInner = new Array()
@@ -29,5 +29,5 @@ const calculate_hours(){
       secondsCount += parseInt(mySplit[1]);
     }
   }
-  (minutesCount + secondsCount/60)/60
-]
+  hoursCount + minutesCount/60 + secondsCount/3600
+}
