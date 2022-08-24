@@ -33,7 +33,8 @@ function calculate_time(){
   secondsCount= secondsCount%60
   hoursCount += Math.floor(minutesCount/60)
   minutesCount = minutesCount % 60
-  console.log(hoursCount+":"+minutesCount+":"+secondsCount)
+  var time = hoursCount+":"+minutesCount+":"+secondsCount
+  return time
 
   }
-calculate_time()
+console.log(calculate_time())
