@@ -1,4 +1,4 @@
-function calculate_hours(){
+function calculate_time(){
   let playlist = document.getElementsByClassName("playlist-items")
   let arr = new Array()
   for (let i = 1 ; i < playlist[1].getElementsByClassName("style-scope ytd-thumbnail-overlay-time-status-renderer").length ;i+=2 ){
@@ -29,5 +29,11 @@ function calculate_hours(){
       secondsCount += parseInt(mySplit[1]);
     }
   }
-  hoursCount + minutesCount/60 + secondsCount/3600
-}
+  minutesCount+= Math.floor(secondsCount/60)
+  secondsCount= secondsCount%60
+  hoursCount += Math.floor(minutesCount/60)
+  minutesCount = minutesCount % 60
+  console.log(hoursCount+":"+minutesCount+":"+secondsCount)
+
+  }
+calculate_time()
